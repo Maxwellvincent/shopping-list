@@ -24,6 +24,19 @@ function handleTask(){
         )
         // once the userInput is set to the UL, clear the input value
         $("#shopping-list-entry").val("");
+        // grab the UL
+        // add click event listern to the ul
+        // make sure click only occures within button toggle class
+        // this refers to the element that was clicked, closest finds the element closest
+        $(".shopping-list").on('click','.shopping-item-toggle', function(e){
+            $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
+        })
+        // grab the UL
+        // once grabbed add a click event to the ul 
+        // make sure click specifies the delete button
+        $(".shopping-list").on("click", ".shopping-item-delete", function(e){
+            $(this).closest("li").remove();
+        })
         
     })
 }
