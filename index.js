@@ -28,7 +28,7 @@ function handleTask(){
         // add click event listern to the ul
         // make sure click only occures within button toggle class
         // this refers to the element that was clicked, closest finds the element closest
-        $(".shopping-list").on('click','.shopping-item-toggle', function(e){
+        $(".shopping-list").on('click',".shopping-item-controls", function(e){
             $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
         })
         // grab the UL
